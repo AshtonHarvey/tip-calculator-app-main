@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+body {
+  background-color: #c5e4e7;
+  color: #375d5e;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Mono", monospace;
+}
+
+body h1 {
+  width: 80px;
+  text-align: center;
+  margin: 40px auto 40px auto;
+  word-wrap: break-word;
+}
+
+body main {
+  margin: 0px auto 0px auto;
+  width: 330px;
+  padding: 45px;
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[9];
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: repeat(9, auto)/1fr 1fr;
+  gap: 15px;
+      grid-template-areas: "bill bill" "input input" "tip  tip" "five ten" "fifteen twentyfive" "fifty custom" "people people" "peopleinput peopleinput" "total total";
+}
+
+body main .bill-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: input;
+  height: 45px;
+  background-color: #f3f8fb;
+}
+
+body main .bill-input p {
+  font-size: 25px;
+  color: #0b4747;
+}
+
+body main .bill-input input {
+  border: none;
+  height: 20px;
+  width: 250px;
+  font-size: 25px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: #0b4747;
+  background-color: #f3f8fb;
+  text-align: right;
+}
+
+body main .bill-text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: bill;
+  font-weight: bold;
+}
+/*# sourceMappingURL=index.css.map */
