@@ -26,10 +26,10 @@ body main {
   -ms-grid-columns: 1fr 1fr;
       grid-template: repeat(9, auto)/1fr 1fr;
   gap: 15px;
-      grid-template-areas: "bill bill" "input input" "tip  tip" "five ten" "fifteen twentyfive" "fifty custom" "people people" "peopleinput peopleinput" "total total";
+      grid-template-areas: "bill bill" "input input" "tip  tip" "five ten" "fifteen twentyfive" "fifty custom" "people people" "people-input people-input" "total total";
 }
 
-body main .bill-input {
+body main .input-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,20 +39,16 @@ body main .bill-input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: input;
   height: 45px;
   background-color: #f3f8fb;
 }
 
-body main .bill-input p {
+body main .input-container p {
   font-size: 25px;
   color: #0b4747;
 }
 
-body main .bill-input input {
+body main .input-container input {
   border: none;
   height: 20px;
   width: 250px;
@@ -70,5 +66,99 @@ body main .bill-text {
   -ms-grid-column-span: 2;
   grid-area: bill;
   font-weight: bold;
+}
+
+body main .select-tip {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: tip;
+}
+
+body main .tip-button {
+  display: block;
+  background-color: #00474b;
+  color: white;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 150px;
+  font-size: 25px;
+  text-align: center;
+  line-height: 2;
+}
+
+body main .five {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: five;
+}
+
+body main .ten {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: ten;
+}
+
+body main .fifteen {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: fifteen;
+}
+
+body main .twentyfive {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: twentyfive;
+}
+
+body main .fifty {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: fifty;
+}
+
+body main .custom {
+  display: block;
+  background-color: #f3f8fb;
+  color: #0b4747;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 150px;
+  font-size: 25px;
+  text-align: center;
+  line-height: 2;
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: custom;
+}
+
+body main .number-of-people {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: people;
+}
+
+body main #people-input {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: people-input;
+}
+
+body main #bill-input-container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: input;
+}
+
+body main .total {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: total;
 }
 /*# sourceMappingURL=index.css.map */

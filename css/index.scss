@@ -2,6 +2,7 @@
 
 $input-background-color: #f3f8fb;
 $input-text-color: #0b4747;
+$button-background-color: #00474b;
 
 body {
   background-color: #c5e4e7;
@@ -29,13 +30,12 @@ body {
     grid-template-areas:
       "bill bill" "input input" "tip  tip" "five ten"
       "fifteen twentyfive" "fifty custom" "people people"
-      "peopleinput peopleinput" "total total";
+      "people-input people-input" "total total";
 
-    .bill-input {
+    .input-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      grid-area: input;
       height: 45px;
       background-color: $input-background-color;
 
@@ -60,6 +60,70 @@ body {
     .bill-text {
       grid-area: bill;
       font-weight: bold;
+    }
+
+    .select-tip {
+      grid-area: tip;
+    }
+
+    .tip-button {
+      display: block;
+      background-color: $button-background-color;
+      color: white;
+      border-radius: 5px;
+      box-sizing: border-box;
+      width: 150px;
+      font-size: 25px;
+      text-align: center;
+      line-height: 2;
+    }
+
+    .five {
+      grid-area: five;
+    }
+
+    .ten {
+      grid-area: ten;
+    }
+
+    .fifteen {
+      grid-area: fifteen;
+    }
+
+    .twentyfive {
+      grid-area: twentyfive;
+    }
+
+    .fifty {
+      grid-area: fifty;
+    }
+
+    .custom {
+      display: block;
+      background-color: $input-background-color;
+      color: $input-text-color;
+      border-radius: 5px;
+      box-sizing: border-box;
+      width: 150px;
+      font-size: 25px;
+      text-align: center;
+      line-height: 2;
+      grid-area: custom;
+    }
+
+    .number-of-people {
+      grid-area: people;
+    }
+
+    #people-input {
+      grid-area: people-input;
+    }
+
+    #bill-input-container {
+      grid-area: input;
+    }
+    .total {
+      grid-area: total;
     }
   }
 }
