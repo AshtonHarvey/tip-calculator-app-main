@@ -33,23 +33,29 @@
       <div class="bill-text">Bill</div>
       <div id="bill-input-container" class="input-container">
         <p>&nbsp$</p>
-        <input class="input-box" type="text" />
+        <input class="input-box" type="number" />
         <p>&nbsp</p>
       </div>
       <div class="select-tip">Select Tip %</div>
-      <div class="five, tip-button">5%</div>
-      <div class="ten, tip-button">10%</div>
-      <div class="fifteen, tip-button">15%</div>
-      <div class="twentyfive, tip-button">25%</div>
-      <div class="fifty, tip-button">50%</div>
-      <div class="custom">Custom</div>
+      <button class="five, tip-button">5%</button>
+      <button class="ten, tip-button">10%</button>
+      <button class="fifteen, tip-button">15%</button>
+      <button class="twentyfive, tip-button">25%</button>
+      <button class="fifty, tip-button">50%</button>
+      <input type="number" class="custom" />
       <div class="number-of-people">Number of People</div>
       <div id="people-input" class="input-container">
         <p>&nbsp#</p>
         <input class="input-box" type="text" />
         <p>&nbsp</p>
       </div>
-      <div class="total">Tip Amount / person Total / person Reset</div>
+      <div class="total">
+        <div class="tip-amount-section">
+          <div>Tip Amount <br />/ person</div>
+          <p class="tip-per-person">$4.27</p>
+        </div>
+        <button class="reset-button">Reset</button>
+      </div>
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

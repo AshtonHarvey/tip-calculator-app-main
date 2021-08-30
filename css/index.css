@@ -86,6 +86,11 @@ body main .tip-button {
   font-size: 25px;
   text-align: center;
   line-height: 2;
+  border: none;
+}
+
+body main .tip-button:hover {
+  background-color: #26c2ad;
 }
 
 body main .five {
@@ -132,6 +137,18 @@ body main .custom {
   -ms-grid-row: 6;
   -ms-grid-column: 2;
   grid-area: custom;
+  font-weight: bold;
+  border: none;
+}
+
+body main .custom input::-webkit-outer-spin-button,
+body main .custom input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body main .custom:hover {
+  background-color: #26c2ad;
 }
 
 body main .number-of-people {
@@ -160,5 +177,48 @@ body main .total {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: total;
+  background-color: #00474b;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+}
+
+body main .total p {
+  word-wrap: break-word;
+}
+
+body main .reset-button {
+  margin: 0 auto 0 auto;
+  display: block;
+  background-color: #26c2ad;
+  color: #0b4747;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 300px;
+  font-size: 25px;
+  text-align: center;
+  line-height: 2;
+  font-weight: bold;
+  border: none;
+}
+
+body main .tip-amount-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .tip-amount-section p br.after {
+  font-size: 2px;
+}
+
+body main .tip-amount-section .tip-per-person {
+  text-align: right;
+  font-size: 25px;
+  width: 60%;
+  font-weight: bold;
+  color: #26c2ad;
 }
 /*# sourceMappingURL=index.css.map */

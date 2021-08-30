@@ -3,6 +3,7 @@
 $input-background-color: #f3f8fb;
 $input-text-color: #0b4747;
 $button-background-color: #00474b;
+$button-hover-color: #26c2ad;
 
 body {
   background-color: #c5e4e7;
@@ -76,6 +77,11 @@ body {
       font-size: 25px;
       text-align: center;
       line-height: 2;
+      border: none;
+
+      &:hover {
+        background-color: $button-hover-color;
+      }
     }
 
     .five {
@@ -109,6 +115,17 @@ body {
       text-align: center;
       line-height: 2;
       grid-area: custom;
+      font-weight: bold;
+      border: none;
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &:hover {
+        background-color: $button-hover-color;
+      }
     }
 
     .number-of-people {
@@ -124,6 +141,49 @@ body {
     }
     .total {
       grid-area: total;
+      background-color: $button-background-color;
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 14px;
+
+      p {
+        word-wrap: break-word;
+      }
+    }
+
+    .reset-button {
+      margin: 0 auto 0 auto;
+      display: block;
+      background-color: $button-hover-color;
+      color: $input-text-color;
+      border-radius: 5px;
+      box-sizing: border-box;
+      width: 300px;
+      font-size: 25px;
+      text-align: center;
+      line-height: 2;
+      font-weight: bold;
+      border: none;
+    }
+
+    .tip-amount-section {
+      display: flex;
+
+      p {
+        br.after {
+          font-size: 2px;
+        }
+      }
+
+      //use &After for making text smaller?
+      .tip-per-person {
+        text-align: right;
+        font-size: 25px;
+        width: 60%;
+        font-weight: bold;
+        color: $button-hover-color;
+      }
     }
   }
 }
