@@ -204,14 +204,14 @@ body main .reset-button {
   border: none;
 }
 
+body main .reset-button:hover {
+  background-color: #9fe8df;
+}
+
 body main .tip-amount-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-body main .tip-amount-section p br.after {
-  font-size: 2px;
 }
 
 body main .tip-amount-section .tip-per-person {
@@ -220,5 +220,15 @@ body main .tip-amount-section .tip-per-person {
   width: 60%;
   font-weight: bold;
   color: #26c2ad;
+  margin: 0 0 20px 0;
+}
+
+body main .tip-amount-section .tip-amount-text {
+  margin: 0 40px 0 0;
+  width: 90px;
+}
+
+.person-text {
+  font-size: 12px;
 }
 /*# sourceMappingURL=index.css.map */

@@ -165,17 +165,14 @@ body {
       line-height: 2;
       font-weight: bold;
       border: none;
+
+      &:hover {
+        background-color: #9fe8df;
+      }
     }
 
     .tip-amount-section {
       display: flex;
-
-      p {
-        br.after {
-          font-size: 2px;
-        }
-      }
-
       //use &After for making text smaller?
       .tip-per-person {
         text-align: right;
@@ -183,7 +180,17 @@ body {
         width: 60%;
         font-weight: bold;
         color: $button-hover-color;
+        margin: 0 0 20px 0;
+      }
+
+      .tip-amount-text {
+        margin: 0 40px 0 0;
+        width: 90px;
       }
     }
   }
+}
+
+.person-text {
+  font-size: 12px;
 }

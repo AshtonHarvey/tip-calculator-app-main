@@ -33,28 +33,50 @@
       <div class="bill-text">Bill</div>
       <div id="bill-input-container" class="input-container">
         <p>&nbsp$</p>
-        <input class="input-box" type="number" />
+        <input id="bill-input" class="input-box" type="number" min="0" />
         <p>&nbsp</p>
       </div>
       <div class="select-tip">Select Tip %</div>
-      <button class="five, tip-button">5%</button>
-      <button class="ten, tip-button">10%</button>
-      <button class="fifteen, tip-button">15%</button>
-      <button class="twentyfive, tip-button">25%</button>
-      <button class="fifty, tip-button">50%</button>
-      <input type="number" class="custom" />
+      <button id="five" class="five, tip-button">5%</button>
+      <button id="ten" class="ten, tip-button">10%</button>
+      <button id="fifteen" class="fifteen, tip-button">15%</button>
+      <button id="twentyfive" class="twentyfive, tip-button">25%</button>
+      <button id="fifty" class="fifty, tip-button">50%</button>
+      <input
+        type="number"
+        id="custom"
+        class="custom"
+        placeholder="Custom"
+        min="0"
+      />
       <div class="number-of-people">Number of People</div>
       <div id="people-input" class="input-container">
         <p>&nbsp#</p>
-        <input class="input-box" type="text" />
+        <input
+          id="number-of-people"
+          class="input-box"
+          type="number"
+          value="1"
+          min="1"
+        />
         <p>&nbsp</p>
       </div>
       <div class="total">
         <div class="tip-amount-section">
-          <div>Tip Amount <br />/ person</div>
-          <p class="tip-per-person">$4.27</p>
+          <div class="tip-amount-text">
+            <div>Tip Amount</div>
+            <div class="person-text">/ person</div>
+          </div>
+          <p id="individual-total" class="tip-per-person">$0.00</p>
         </div>
-        <button class="reset-button">Reset</button>
+        <div class="tip-amount-section">
+          <div class="tip-amount-text">
+            <div>Total</div>
+            <div class="person-text">/ person</div>
+          </div>
+          <p id="combined-total" class="tip-per-person">$0.00</p>
+        </div>
+        <button id="reset-button" class="reset-button">Reset</button>
       </div>
       <div class="attribution">
         Challenge by
@@ -63,5 +85,6 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </div>
     </main>
+    <script src="./Javascript/index.js"></script>
   </body>
 </html>
