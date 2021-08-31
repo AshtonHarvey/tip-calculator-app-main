@@ -29,6 +29,11 @@ body main {
       grid-template-areas: "bill bill" "input input" "tip  tip" "five ten" "fifteen twentyfive" "fifty custom" "people people" "people-input people-input" "total total";
 }
 
+body main .error-border {
+  border: 4px solid #e39080;
+  background-color: purple;
+}
+
 body main .input-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,6 +161,19 @@ body main .number-of-people {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: people;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .number-of-people p {
+  margin: 0;
+}
+
+body main #error-message {
+  text-align: right;
+  width: 150px;
+  color: #e39080;
 }
 
 body main #people-input {
@@ -230,5 +248,9 @@ body main .tip-amount-section .tip-amount-text {
 
 .person-text {
   font-size: 12px;
+}
+
+.hidden-element {
+  display: none;
 }
 /*# sourceMappingURL=index.css.map */

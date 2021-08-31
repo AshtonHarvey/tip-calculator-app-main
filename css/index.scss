@@ -4,6 +4,7 @@ $input-background-color: #f3f8fb;
 $input-text-color: #0b4747;
 $button-background-color: #00474b;
 $button-hover-color: #26c2ad;
+$error-color: #e39080;
 
 body {
   background-color: #c5e4e7;
@@ -32,6 +33,11 @@ body {
       "bill bill" "input input" "tip  tip" "five ten"
       "fifteen twentyfive" "fifty custom" "people people"
       "people-input people-input" "total total";
+
+    .error-border {
+      border: 4px solid $error-color;
+      background-color: purple;
+    }
 
     .input-container {
       display: flex;
@@ -130,6 +136,17 @@ body {
 
     .number-of-people {
       grid-area: people;
+      display: flex;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    #error-message {
+      text-align: right;
+      width: 150px;
+      color: $error-color;
     }
 
     #people-input {
@@ -193,4 +210,8 @@ body {
 
 .person-text {
   font-size: 12px;
+}
+
+.hidden-element {
+  display: none;
 }

@@ -9,6 +9,8 @@ const numberOfPeopleInput = document.getElementById("number-of-people");
 const individualTotalText = document.getElementById("individual-total");
 const combinedTotalText = document.getElementById("combined-total");
 const resetButton = document.getElementById("reset-button");
+const errorText = document.getElementById("error-message");
+const peopleInput = document.getElementById("people-input");
 
 let tipPercent;
 
@@ -43,7 +45,27 @@ function OnCustomPercentInput() {
   UpdateTipPercentage(customPercentInput.value);
 }
 function OnNumberOfPeopleInput() {
-  UpdateTipAmounts();
+  if (isValidNumber()) {
+    UpdateTipAmounts();
+    DisableError();
+  } else EnableError();
+}
+
+function EnableError() {
+  errorText.classList.remove("hidden-element");
+  peopleInput.classList.add("error-border");
+}
+
+function DisableError() {
+  errorText.classList.add("hidden-element");
+  peopleInput.classList.remove("error-border");
+}
+
+function isValidNumber() {
+  let valid = numberOfPeopleInput.value > 0 ? true : false;
+  console.log(`checking is valid:  ${valid} ${numberOfPeopleInput.value}`);
+
+  return valid;
 }
 
 function OnResetButton() {
@@ -63,6 +85,7 @@ function UpdateTipPercentage(percent) {
 function UpdateTipAmounts() {
   individualTotalText.innerHTML = `$${String(CalculateIndividualTip())}`;
   combinedTotalText.innerHTML = `$${String(CalculateIndividualTotal())}`;
+  console.log("updating tip");
 }
 
 function CalculateIndividualTip() {
